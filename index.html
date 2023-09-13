@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="estilos/style.css"/>
     <title>Pedra Papel e Tesoura</title>
 </head>
 <body>
-    
+<div id="fundo">
+    <div id="rules">
+        <div>
+            <p>RULES</p>
+            <img id="fechar" src="img/icon-close.svg" alt=""/>
+        </div>
+        <div><img src="img/image-rules.svg" alt=""/></div>
+    </div>
+</div>
+<header>
+    <div>
+        <p>ROCK</p>
+        <p>PAPER</p>
+        <p>SCISSORS</p>
+    </div>
+    <div>
+        <p>SCORE</p>
+        <p id="pontuacao">0</p>
+    </div>
+</header>
+<section>
+    <div id="papel"><img src="img/icon-paper.svg" alt="icone papel"/></div>
+    <div id="tesoura">
+        <img src="img/icon-scissors.svg" alt="icone tesoura"/>
+    </div>
+    <div id="pedra"><img src="img/icon-rock.svg" alt="icone pedra"/></div>
+</section>
+<div id="step-2">
+    <div>
+        <p>YOU PICKED</p>
+        <div class="escJogadorPedra">
+            <img src="img/icon-rock.svg" alt="icone pedra"/>
+        </div>
+        <div class="escJogadorPapel">
+            <img src="img/icon-paper.svg" alt="icone papel"/>
+        </div>
+        <div class="escJogadorTesoura">
+            <img src="img/icon-scissors.svg" alt="icone tesoura"/>
+        </div>
+    </div>
+    <div class="telaFim">
+        <div id="ganhou">
+            <p>YOU WIN!</p>
+            <input onclick="jogarNovamente()" type="button" value="Play Again">
+        </div>
+        <div id="perdeu">
+            <p>YOU LOSE</p>
+            <input onclick="jogarNovamente()" type="button" value="Play Again">
+        </div>
+        <div id="empate">
+            <p>MATCH!</p>
+            <input onclick="jogarNovamente()" type="button" value="Play Again">
+        </div>
+    </div>
+    <div>
+        <p>THE HOUSE PICKED</p>
+        <div class="empty"></div>
+        <div class="escJogadorPedra" id="maqPedra">
+            <img src="img/icon-rock.svg" alt="icone pedra"/>
+        </div>
+        <div class="escJogadorPapel" id="maqPapel">
+            <img src="img/icon-paper.svg" alt="icone papel"/>
+        </div>
+        <div class="escJogadorTesoura" id="maqTesoura">
+            <img src="img/icon-scissors.svg" alt="icone tesoura"/>
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="regras">
+        <p>RULES</p>
+    </div>
+</footer>
+<script src="scripts/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,243 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+body {
+  position: relative;
+  overflow: hidden;
+  height: 97vh;
+  background-image: radial-gradient(
+    circle at top,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  );
+}
+header {
+  border: 2px solid hsl(217, 16%, 45%);
+  border-radius: 20px;
+  width: 600px;
+  height: 115px;
+  margin: 30px auto auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header > div:nth-child(odd) {
+  margin-left: 20px;
+  font-size: 30px;
+  color: white;
+  line-height: 25px;
+}
+header > div:nth-child(even) {
+  background-color: white;
+  border-radius: 10px;
+  margin-right: 20px;
+  width: 110px;
+  height: 80px;
+  text-align: center;
+}
+header > div:nth-child(even) > p:nth-child(odd) {
+  margin-top: 10px;
+  font-size: 14px;
+  color: hsl(229, 64%, 46%);
+}
+header > div:nth-child(even) > p:nth-child(even) {
+  font-size: 50px;
+  font-weight: 700;
+  margin-top: 0;
+  color: hsl(229, 25%, 31%);
+  line-height: 40px;
+}
+section {
+  display: grid;
+  background-image: url(../img/bg-triangle.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  grid-template-rows: 200px 200px;
+  grid-template-columns: 250px 250px;
+  width: 500px;
+  height: 400px;
+  margin: 40px auto auto;
+}
+section > div {
+  display: flex;
+  margin: auto;
+  background-color: white;
+  width: 120px;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+section > #papel {
+  border: 20px solid hsl(230, 89%, 65%);
+  box-shadow: inset 1px 5px 1px rgba(0, 0, 0, 0.274);
+  transition: box-shadow 0.3s;
+}
+section > #papel:hover {
+  box-shadow: inset 1px 5px 1px rgba(0, 0, 0, 0.274),
+    1px 1px 1px 20px rgba(255, 255, 255, 0.068);
+}
+section > #tesoura {
+  border: 20px solid hsl(40, 84%, 53%);
+  box-shadow: inset 1px 5px 1px rgba(0, 0, 0, 0.274);
+  transition: box-shadow 0.3s;
+}
+section > #tesoura:hover {
+  box-shadow: inset 1px 5px 1px rgba(0, 0, 0, 0.274),
+    1px 1px 1px 20px rgba(255, 255, 255, 0.068);
+}
+section > #pedra {
+  border: 20px solid hsl(349, 70%, 56%);
+  box-shadow: inset 1px 5px 1px rgba(0, 0, 0, 0.274);
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+  transition: box-shadow 0.3s;
+}
+#step-2 {
+  margin: auto;
+  right: 750px;
+  width: 800px;
+  height: 400px;
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#step-2 > div {
+  text-align: center;
+  margin: 50px;
+}
+#step-2 > div > p {
+  color: white;
+  font-size: 20px;
+}
+#step-2 > div > .empty {
+  margin-top: 30px;
+  background-color: rgba(0, 0, 0, 0.253);
+  border-radius: 50%;
+  width: 170px;
+  height: 170px;
+}
+.escJogadorPedra {
+  display: none;
+  margin-top: 30px;
+  background-color: white;
+  width: 130px;
+  height: 130px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 20px solid hsl(349, 70%, 56%);
+  box-shadow: inset 1px 5px 1px rgba(0, 0, 0, 0.274);
+  /*box-shadow: inset 1px 5px 1px 1px rgba(0, 0, 0, 0.274), 1px 1px 40px rgba(255, 255, 255, 0.13), 1px 1px 1px 70px rgba(255, 255, 255, 0.05), 1px 1px 1px 100px rgba(255, 255, 255, 0.03);*/
+}
+.escJogadorPapel {
+  display: none;
+  margin-top: 30px;
+  background-color: white;
+  width: 130px;
+  height: 130px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 20px solid hsl(230, 89%, 65%);
+  box-shadow: inset 1px 5px 1px rgba(0, 0, 0, 0.274);
+}
+.escJogadorTesoura {
+  display: none;
+  margin-top: 30px;
+  background-color: white;
+  width: 130px;
+  height: 130px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 20px solid hsl(40, 84%, 53%);
+  box-shadow: inset 1px 5px 1px rgba(0, 0, 0, 0.274);
+}
+section > #pedra:hover {
+  box-shadow: inset 1px 5px 1px rgba(0, 0, 0, 0.274),
+    1px 1px 1px 20px rgba(255, 255, 255, 0.068);
+}
+.telaFim{
+  display: none;
+  top: 117px;
+  left: 370px;
+  height: fit-content;
+}
+.telaFim > div > p{
+  font-size: 23px;
+  color: white;
+}
+.telaFim > div > input{
+  width: 120px;
+  height: 30px;
+  margin-top: 80px;
+  color: hsl(229, 25%, 31%);
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+.telaFim > div > input:hover{
+  background-color: #bcbcbc;
+}
+footer {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+footer > div {
+  border: 1px solid hsl(217, 16%, 45%);
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+footer > div:hover {
+  background-color: hsl(217, 16%, 45%);
+}
+footer > div > p {
+  color: rgba(255, 255, 255, 0.808);
+  font-weight: 600;
+}
+#fundo {
+  width: 100vw;
+  height: 100vh;
+  margin-top: -30px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.349);
+  opacity: 0;
+  pointer-events: none;
+}
+#rules {
+  position: absolute;
+  width: 350px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+}
+#rules > div {
+  display: flex;
+  margin: 20px;
+  justify-content: space-between;
+}
+#rules > div > p {
+  font-size: 20px;
+  font-weight: 700;
+  color: hsl(229, 25%, 31%);
+}
+#fechar {
+  cursor: pointer;
+}

@@ -134,7 +134,6 @@ section > #pedra {
   border-radius: 50%;
   border: 20px solid hsl(349, 70%, 56%);
   box-shadow: inset 1px 5px 1px rgba(0, 0, 0, 0.274);
-  /*box-shadow: inset 1px 5px 1px 1px rgba(0, 0, 0, 0.274), 1px 1px 40px rgba(255, 255, 255, 0.13), 1px 1px 1px 70px rgba(255, 255, 255, 0.05), 1px 1px 1px 100px rgba(255, 255, 255, 0.03);*/
 }
 .escJogadorPapel {
   display: none;
@@ -164,17 +163,17 @@ section > #pedra:hover {
   box-shadow: inset 1px 5px 1px rgba(0, 0, 0, 0.274),
     1px 1px 1px 20px rgba(255, 255, 255, 0.068);
 }
-.telaFim{
+.telaFim {
   display: none;
   top: 117px;
   left: 370px;
   height: fit-content;
 }
-.telaFim > div > p{
+.telaFim > div > p {
   font-size: 23px;
   color: white;
 }
-.telaFim > div > input{
+.telaFim > div > input {
   width: 120px;
   height: 30px;
   margin-top: 80px;
@@ -184,7 +183,7 @@ section > #pedra:hover {
   border-radius: 10px;
   transition: background-color 0.3s;
 }
-.telaFim > div > input:hover{
+.telaFim > div > input:hover {
   background-color: #bcbcbc;
 }
 footer {
